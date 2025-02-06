@@ -1,0 +1,29 @@
+/* bugSolution.css */
+
+/* Ensure parent element has explicitly defined width */
+#parent {
+  width: 500px;
+}
+
+#child {
+  width: calc(100% - 10px);
+  /* Now calculates correctly */
+}
+
+/* Correct use of units within calc() */
+.element {
+  width: calc(100px + 2em);
+  /* Ensures consistent unit usage */
+}
+
+/* Correct order of operations using parentheses */
+.element2 {
+  width: calc((100px + 20px) / 2);
+  /* Uses parentheses to control the calculation order*/
+}
+
+/* Use min/max to constrain values */
+.constrained {
+  width: calc(min(100%, 500px));
+  /* Constrains width to 100% or 500px, whichever is smaller */
+}
